@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+                <title>C3i</title>
+
+        
+
+
+
+
+        <script src="inc/jquery-3.5.1.slim.min.js"  crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="storage/imgs/favicon.svg">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+        
+        <link href="css/animate.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/sidebar.css" rel="stylesheet">
+        <link href="css/build.css" rel="stylesheet">
+
+    </head>
+    <body>
+                <div class="z-50 clash-font-normal tracking-wider container text-dark-0 backdrop-blur-sm bg-gray-0/75 mx-auto flex justify-between items-center py-4 px-8 my-4 sticky top-4 rounded-full">
+<a href="index.html">
+    <img src="storage/imgs/logo.svg" alt="" width="100%" >
+</a>
+
+
+
+<div class="navlinks lg:block hidden">
+<a href="index.html" class="capitalize mx-4 " >home</a>
+<a href="about-us.html" class="capitalize mx-4 " >about us</a>
+<a href="services.html" class="capitalize mx-4 " >services</a>
+
+<a href="contact-us.html" class="bg-mint-0 border-none py-2.5 px-5 rounded-full text-white-0">Contact Us</a>
+</div>
+
+
+
+<div class="burger-menu flex lg:hidden " onclick="openNav()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+
+</div>
+
+
+        <div id="mySidenav" class="sidenav bg-mint-0  my-dir   lg:w-2/6 w-3/6 ">
+<div class="container mx-auto flex flex-col	lg:pr-32 ">
+
+    <div class="sidebar-header flex items-center justify-end relative">
+
+        <div class="hover:bg-beej-1 rounded-full p ">
+            <a href="javascript:void(0)" class="side-btn hover:filter-none dark:filter-none p-3 h-12 w-12" onclick="closeNav()">
+                <img src="storage/imgs/close.png"
+                    alt=""></a>
+
+        </div>
+
+    </div>
+
+    
+    <div class="lg:px-0 px-4">
+        <div class="">
+            
+                <a href="index.html"
+                    class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">home</a>
+                <br>
+
+            
+                <a href="about-us.html"
+                    class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">about us</a>
+                <br>
+
+            
+                <a href="services.html"
+                    class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">services</a>
+                <br>
+
+                        <a href="contact-us.html"
+            class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">Contact Us</a>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+<div id="main">
+
+        
+<div class="container lg:px-0 px-4 mx-auto my-8 pb-12">
+    <div class="flex lg:flex-row flex-col justify-between gap-12">
+<div class="lg:w-2/5 w-full">
+    <img src="storage/imgs/choosevector.png" alt="" class="ml-20 w-3/5">
+
+    <div class=" bg-gray-1 rounded-[30px]		">
+        <div class="p-8">
+            <h1 class="mb-8 text-5xl text-dark-0 clash-font-normal">Our Office</h1>
+            <a href="https://www.google.com/maps/search/Downtown+Complex,+Building+D+King+Faisal+Road+P.O.+Box+31188+%E2%80%93+Al+-Khobar+31952+Kingdom+of+Saudi+Arabia./@26.3832706,50.1901412,17z/data=!3m1!4b1?entry=ttu" target="_blank">
+                <p class="text-dark-1 mb-3">Downtown Complex, Building D King Faisal Road P.O. Box 31188 – Al -Khobar 31952 Kingdom of Saudi Arabia.</p>
+            </a>
+            <a class="text-dark-1 " href="tel:+966135109625">+966135109625</a>
+            <br>
+           <p class="text-dark-1 my-3">Sunday – Thursday
+            <br>
+            From 8:00 AM to 4:00 PM</p>
+
+            <a class="text-dark-1 " href="mailto:Info@C3iProtect.com">Info@C3iProtect.com</a>
+
+</div>
+
+    </div>
+</div>
+
+<div class="lg:w-3/5 w-full">
+    <h1 class="my-8 text-5xl text-dark-0 clash-font-normal">Let’s get in touch</h1>
+    <form class="" action="contact-submit" method="POST">
+        <div class="grid grid-cols-2 gap-4 text-dark-0">
+            <input class="my-input mb-4" type="text" value="" id="name" name="name" placeholder="Name"   required>
+
+            <input class="my-input mb-4" type="email"  value="" id="email" name="email" placeholder="Email"   required>
+
+            <input class="my-input mb-4" type="text" id="subject" name="subject" value="" placeholder="Subject"   required>
+
+            <input class="my-input mb-4" type="tel" value="" id="phone" name="phone" placeholder="Phone"   required>
+            <input type="hidden" name="_token" value="dJYdRCIkoulseLUH20aZWNtrdj1u2mhqvDundTCQ" autocomplete="off">
+
+            <textarea class="my-input col-span-2" id="message" name="msg" placeholder="Message" rows="4"  required></textarea>
+        </div>
+        <div data-theme="light" data-sitekey="6LdsvEAsAAAAAPTDX8XT1FUf2fBjvzrnRTt_UrNH" class="g-recaptcha"></div>
+
+        <button type="submit" value="Send" class="bg-mint-0  mt-4 border-none py-2 px-8 float-right rounded-full text-white-0">Send</button>
+           
+    </form>
+
+
+</div>
+
+
+
+    </div>
+</div>
+
+<div class="footer-section bg-gray-1 py-8 relative z-10">
+    <div class="container mx-auto">
+    <div class="flex lg:flex-row flex-col justify-between lg:px-0 px-4 gap-12 my-4">
+        <div class="lg:w-1/3 w-full">
+            <img src="storage/imgs/logo.svg" alt="" class="mb-4" width="50%" >
+       <p class="text-dark-1">Large security organizations have Proactivity helps anticipate crises and reduces losses and risks.</p>
+        </div>
+        <div class="lg:w-1/3 w-full lg:flex justify-center">
+            <div class="">
+            <h1 class="clash-font-normal text-3xl text-dark-0 mb-3">Pages</h1>
+                        <a href="index.html" class="capitalize mb-1.5 block" >home</a>
+           <br>
+                        <a href="about-us.html" class="capitalize mb-1.5 block" >about us</a>
+           <br>
+                        <a href="services.html" class="capitalize mb-1.5 block" >services</a>
+           <br>
+                        <a href="contact-us.html" class="capitalize mb-1.5 block" >Contact Us</a>
+        </div>
+        </div>
+        <div class="lg:w-1/3 w-full ">
+            <h1 class="clash-font-normal text-3xl text-dark-0 mb-3">Contact</h1>
+
+           <a href="https://www.google.com/maps/search/Downtown+Complex,+Building+D+King+Faisal+Road+P.O.+Box+31188+%E2%80%93+Al+-Khobar+31952+Kingdom+of+Saudi+Arabia./@26.3832706,50.1901412,17z/data=!3m1!4b1?entry=ttu" target="_blank">
+            <p class="text-dark-1 mb-3">Downtown Complex, Building D King Faisal Road P.O. Box 31188 – Al -Khobar 31952 Kingdom of Saudi Arabia.</p>
+        </a>
+
+            <a class="text-dark-1 " href="tel:+966135109625">+966135109625</a>
+           <br>
+            <a class="text-dark-1 " href="mailto:Info@C3iProtect.com">Info@C3iProtect.com</a>
+
+        </div>
+
+    </div>
+    <hr class="h-0.5 text-dark-0">
+    <p class="lg:px-0 px-4 text-dark-1 mt-4 text-dark-0">
+	© <span id="year"></span> C3i Protect. All Rights Reserved.
+	</p>
+	<script>
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+</div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+
+<script src="js/wow.min.js"></script>
+
+
+
+
+<script src="https://www.google.com/recaptcha/api.js?" async defer></script>
+
+
+
+<script>
+
+$(function(){
+  new WOW().init();
+});
+
+//  function switchNav(){
+//         $('.sidebar-section').toggleClass('sidebar-open')
+
+//     }
+
+
+$( window ).on( "resize", function() {
+    closeNav()
+} );
+
+
+function openNav() {
+        document.getElementById("mySidenav").style.marginLeft = "0vw";
+        // $('#main').css('filter','brightness(70%)')
+        // $('.my-navbar').css('filter','brightness(70%)')
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+
+
+            if(window.innerWidth<1024){
+                document.getElementById("mySidenav").style.marginLeft = "-50vw";
+
+            }
+            else {
+                document.getElementById("mySidenav").style.marginLeft = "-33.333333vw";
+
+            }
+            // $('#main').css('filter','brightness(100%)')
+            // $('.my-navbar').css('filter','brightness(100%)')
+
+        }
+</script>
+    </body>
+</html>

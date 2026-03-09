@@ -1,0 +1,464 @@
+<script src="inc/jquery-3.5.1.slim.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+                <title>C3i</title>
+
+        
+
+
+
+
+        <script src="inc/jquery-3.5.1.slim.min.js"  crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="storage/imgs/favicon.svg">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+        
+        <link href="css/animate.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/sidebar.css" rel="stylesheet">
+        <link href="css/build.css" rel="stylesheet">
+
+    </head>
+    <body>
+                <div class="z-50 clash-font-normal tracking-wider container text-dark-0 backdrop-blur-sm bg-gray-0/75 mx-auto flex justify-between items-center py-4 px-8 my-4 sticky top-4 rounded-full">
+<a href="index.html">
+    <img src="storage/imgs/logo.svg" alt="" width="100%" >
+</a>
+
+
+
+<div class="navlinks lg:block hidden">
+<a href="index.html" class="capitalize mx-4 " >home</a>
+<a href="about-us.html" class="capitalize mx-4 " >about us</a>
+<a href="services.html" class="capitalize mx-4 font-bold" >services</a>
+
+<a href="contact-us.html" class="bg-mint-0 border-none py-2.5 px-5 rounded-full text-white-0">Contact Us</a>
+</div>
+
+
+
+<div class="burger-menu flex lg:hidden " onclick="openNav()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+
+</div>
+
+
+        <div id="mySidenav" class="sidenav bg-mint-0  my-dir   lg:w-2/6 w-3/6 ">
+<div class="container mx-auto flex flex-col	lg:pr-32 ">
+
+    <div class="sidebar-header flex items-center justify-end relative">
+
+        <div class="hover:bg-beej-1 rounded-full p ">
+            <a href="javascript:void(0)" class="side-btn hover:filter-none dark:filter-none p-3 h-12 w-12" onclick="closeNav()">
+                <img src="storage/imgs/close.png"
+                    alt=""></a>
+
+        </div>
+
+    </div>
+
+    
+    <div class="lg:px-0 px-4">
+        <div class="">
+            
+                <a href="index.html"
+                    class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">home</a>
+                <br>
+
+            
+                <a href="about-us.html"
+                    class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">about us</a>
+                <br>
+
+            
+                <a href="services.html"
+                    class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">services</a>
+                <br>
+
+                        <a href="contact-us.html"
+            class="text-white-0 my-2 capitalize  text-nav-sec px-0 text-decoration-none  " style="font-weight: 400">Contact Us</a>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+<div id="main">
+
+        <div class="container bg-gray-0 p-8 rounded-[70px]  text-dark-0 mx-auto flex lg:flex-row flex-col justify-between items-center lg:h-[80vh]">
+    <div class="lg:w-1/3 w-full mb-4">
+        <h1 class="text-5xl mb-4 clash-font-normal">Risk-free Maximum Security.</h1>
+        <p class="mb-4">C3i Protect services are designed to deliver tailored and comprehensive solutions that address the unique security and urban development needs of our clients.
+        </p>
+        <div class="flex justify-between gap-8">
+            <a class="w-1/2 block" href="contact-us.html">
+
+            <button class="bg-mint-0 w-full mt-4 border-none py-2 px-5 rounded-full text-white-0">Contact Us</button>
+            </a>
+            
+
+        </div>
+    </div>
+    <div class="lg:w-2/5 w-full">
+        <img src="storage/imgs/service1.png" class="w-auto h-[full]" alt="">
+    </div>
+</div>
+
+
+<div class="services-section container mx-auto py-16 lg:px-0 px-4">
+    <div class="flex lg:flex-row flex-col justify-betwen gap-8">
+        <div class="lg:w-1/3 w-full">
+            <h1 class="lg:text-5xl text-4xl mb-4 text-dark-0 clash-font-normal">Our Services</h1>
+            <p class="mb-4 text-dark-0">
+                We collaborate closely with businesses and communities to understand their challenges and aspirations, allowing us to design and implement projects that bring lasting value.
+            </p>
+        </div>
+        <div class="lg:w-2/3 w-full">
+                        <div class="service-card-1 plus-btn service-card " data-id="1">
+            <div class="flex justify-between items-center ">
+                <h1 class="lg:text-4xl text-3xl mb-4  text-dark-1 clash-font-normal font-normal">Consulting</h1>
+
+                <div class=" plusminus ml-auto plus-btn1" data-id="1"></div>
+
+            </div>
+            <p class=" service-1 mb-4 text-dark-0 w-4/5 hidden">Guiding clients with expert insights, our consulting enhances software utilization for optimal security and urban management.</p>
+        </div>
+        <hr class="my-6">
+
+                        <div class="service-card-2 plus-btn service-card " data-id="2">
+            <div class="flex justify-between items-center ">
+                <h1 class="lg:text-4xl text-3xl mb-4  text-dark-1 clash-font-normal font-normal">System Design</h1>
+
+                <div class=" plusminus ml-auto plus-btn2" data-id="2"></div>
+
+            </div>
+            <p class=" service-2 mb-4 text-dark-0 w-4/5 hidden">Crafting complex system designs that seamlessly integrate into our software, improving security, urban efficiency and implementing client requirements.</p>
+        </div>
+        <hr class="my-6">
+
+                        <div class="service-card-3 plus-btn service-card " data-id="3">
+            <div class="flex justify-between items-center ">
+                <h1 class="lg:text-4xl text-3xl mb-4  text-dark-1 clash-font-normal font-normal">Integrations</h1>
+
+                <div class=" plusminus ml-auto plus-btn3" data-id="3"></div>
+
+            </div>
+            <p class=" service-3 mb-4 text-dark-0 w-4/5 hidden">Seamlessly integrating diverse devices like cameras, sensors, and radars, our software maximizes real-time insights for comprehensive security.</p>
+        </div>
+        <hr class="my-6">
+
+                        <div class="service-card-4 plus-btn service-card " data-id="4">
+            <div class="flex justify-between items-center ">
+                <h1 class="lg:text-4xl text-3xl mb-4  text-dark-1 clash-font-normal font-normal">Implementation and After-Sale Support</h1>
+
+                <div class=" plusminus ml-auto plus-btn4" data-id="4"></div>
+
+            </div>
+            <p class=" service-4 mb-4 text-dark-0 w-4/5 hidden">Our dedicated team ensures a smooth implementation process, and our ongoing support guarantees that you get the most out of your investment.</p>
+        </div>
+        <hr class="my-6">
+
+            
+        </div>
+    </div>
+    </div>
+
+
+
+<hr class="text-mint-0">
+
+<div class="relative marquee-container ">
+    <div class="marquee lg:text-3xl text-xl text-mint-0 flex justify-around">
+
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+
+
+    </div>
+    <div class="marquee marquee2 lg:text-3xl lg:block hidden text-xl text-mint-0 flex justify-around">
+
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+            <span class="clash-font-normal lg:mx-0 mx-2">Protection</span> <span class="clash-font-med font-bold	lg:mx-0 mx-2">Intelligent</span>
+
+
+    </div>
+  </div>
+
+<hr class="text-mint-0 bg-mint-0 h-1	">
+<div class="container mx-auto py-20 lg:px-0 px-4">
+<div class="grid lg:grid-cols-3 grid-cols-1 gap-12">
+<div class="wow fadeInLeft" data-wow-duration="2s" >
+<h1 class="text-5xl clash-font-normal text-dark-1">Features</h1>
+<p class="mt-8 text-lightdark-0">Our software features are meticulously crafted to provide a comprehensive and advanced solution for security management and urban development. With a focus on innovation, our platform offers a range of cutting-edge tools that empower businesses and communities to enhance safety, streamline operations, and foster collaboration.</p>
+</div>
+
+<div data-wow-duration="1s" class="wow fadeInUp">
+    <img src="storage/imgs/UltimateControl.png" class="h-20 mb-8" alt="" >
+    <h1 class="text-2xl font-semibold text-lightdark-0 clash-font-normal">Open Platform Integration</h1>
+  <p class="text-lightdark-0 mb-4">The Alarm Management Perspective has a 3D view panel and 6 video feed panels.</p>
+    
+</div>
+<div data-wow-duration="1s" class="wow fadeInRight">
+    <img src="storage/imgs/MonitoringAccess.png" class="h-20 mb-8" alt="" >
+    <h1 class="text-2xl font-semibold text-lightdark-0 clash-font-normal">Monitoring Access</h1>
+  <p class="text-lightdark-0 mb-4">Manage users, permissions, and database for comprehensive control.</p>
+    
+</div>
+<div data-wow-duration="1s" class="wow fadeInLeft">
+    <img src="storage/imgs/UnifySubsystems.png" class="h-20 mb-8" alt="" >
+    <h1 class="text-2xl font-semibold text-lightdark-0 clash-font-normal">Security Alert Management</h1>
+  <p class="text-lightdark-0 mb-4">Integration sensors measure physical effects, enable third-party systems, and report data to the control system in unlimited subsystems.</p>
+    
+</div>
+<div data-wow-duration="1s" class="wow fadeInUp">
+    <img src="storage/imgs/2D maps3D modeling.png" class="h-20 mb-8" alt="" >
+    <h1 class="text-2xl font-semibold text-lightdark-0 clash-font-normal">2D maps/3D modeling</h1>
+  <p class="text-lightdark-0 mb-4">Customize clients (facility, project, building, site) with 3D modeling and video fusion.</p>
+    
+</div>
+<div data-wow-duration="1s" class="wow fadeInRight">
+    <img src="storage/imgs/MultiplyEfficiency.png" class="h-20 mb-8" alt="" >
+    <h1 class="text-2xl font-semibold text-lightdark-0 clash-font-normal">Boost Operational Effectiveness</h1>
+  <p class="text-lightdark-0 mb-4">Open multiple video walls and implement guard tours for enhanced efficiency.</p>
+    
+</div>
+
+</div>
+</div>
+
+
+
+<div class="container lg:px-0 px-4 mx-auto multi-section flex items-center lg:h-screen">
+    <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 items-center lg:h-full">
+        <div>
+            <img src="storage/imgs/multiimg.png" alt="" class="w-full">
+        </div>
+        <div>
+            <h1 class="lg:text-4xl text-3xl mb-4  text-dark-1 clash-font-normal font-normal">Multi System, One Platform</h1>
+
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Access Control</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Building Management</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> IDAS</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> LRDAS</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Sensors &amp; Alarms</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> GIS Maps</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Intrusion Detection</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Organization &amp; Government</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Video Surveillance</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Communication Systems</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Border &amp; Perimeter Protection Systems</p>
+                        <p class="mb-2"> <span class="text-mint-0 ml-2">&#9679;</span> Procedures &amp; Policies</p>
+                    </div>
+
+    </div>
+
+</div>
+
+
+<div class="container lg:px-0 px-4 mx-auto py-12">
+    <h1 class="lg:text-5xl text-4xl pb-8 clash-font-normal text-dark-1  mx-auto text-center mb-8">Primary Focus
+       <br>
+        High-performance Solution</h1>
+<div class="grid lg:grid-cols-3 grid-cols-1 gap-12">
+<div class="solution">
+    <img src="storage/imgs/surveillance.png" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text">
+        <div class="flex justify-start  items-center solution-title mb-8 gap-4">
+            <div class="h-0.5	 w-4 bg-mint-0"></div>
+            <div class="clash-font-normal text-3xl  ">Surveillance</div>
+        </div>
+        <p><p>C3i Protect offers comprehensive building surveillance with advanced video analytics, enabling effective alert management and quick response to critical events.</p><p><br><br></p><ul><li>Building Surveillance</li><li>Video analytics for anomalies</li><li>Virtual GuardTour</li><li>Alert handling and incident management</li></ul></p>
+    </div>
+    </div>
+  </div>
+<div class="solution">
+    <img src="storage/imgs/integration.png" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text">
+        <div class="flex justify-start  items-center solution-title mb-8 gap-4">
+            <div class="h-0.5	 w-4 bg-mint-0"></div>
+            <div class="clash-font-normal text-3xl  ">Integration</div>
+        </div>
+        <p><p>Effortlessly integrate camera feeds and incorporate various sensors like microwave sensors and radars.</p>
+<br>
+<ul style="list-style-type: circle; margin-left:2rem">
+<li>Seamlessly integrate with video management software</li>
+<li>Facilitate Seamless Integration of Third-Party sensors</li>
+</ul>
+</p>
+    </div>
+    </div>
+  </div>
+<div class="solution">
+    <img src="storage/imgs/management.png" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text">
+        <div class="flex justify-start  items-center solution-title mb-8 gap-4">
+            <div class="h-0.5	 w-4 bg-mint-0"></div>
+            <div class="clash-font-normal text-3xl  ">Management</div>
+        </div>
+        <p><p>Ensure comprehensive security management, swift incident response, and proactive monitoring.</p>
+<br>
+<ul style="list-style-type: circle; margin-left:2rem">
+<li>SOPs (Standard Operating Procedures)</li>
+<li>Alarms and Events</li>
+<li>Video Camera Feed Downloads</li>
+<li>Reports and logs exporting with multiple format options</li>
+</ul>
+</p>
+    </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div class="footer-section bg-gray-1 py-8 relative z-10">
+    <div class="container mx-auto">
+    <div class="flex lg:flex-row flex-col justify-between lg:px-0 px-4 gap-12 my-4">
+        <div class="lg:w-1/3 w-full">
+            <img src="storage/imgs/logo.svg" alt="" class="mb-4" width="50%" >
+       <p class="text-dark-1">Large security organizations have Proactivity helps anticipate crises and reduces losses and risks.</p>
+        </div>
+        <div class="lg:w-1/3 w-full lg:flex justify-center">
+            <div class="">
+            <h1 class="clash-font-normal text-3xl text-dark-0 mb-3">Pages</h1>
+                        <a href="index.html" class="capitalize mb-1.5 block" >home</a>
+           <br>
+                        <a href="about-us.html" class="capitalize mb-1.5 block" >about us</a>
+           <br>
+                        <a href="services.html" class="capitalize mb-1.5 block" >services</a>
+           <br>
+                        <a href="contact-us.html" class="capitalize mb-1.5 block" >Contact Us</a>
+        </div>
+        </div>
+        <div class="lg:w-1/3 w-full ">
+            <h1 class="clash-font-normal text-3xl text-dark-0 mb-3">Contact</h1>
+
+           <a href="https://www.google.com/maps/search/Downtown+Complex,+Building+D+King+Faisal+Road+P.O.+Box+31188+%E2%80%93+Al+-Khobar+31952+Kingdom+of+Saudi+Arabia./@26.3832706,50.1901412,17z/data=!3m1!4b1?entry=ttu" target="_blank">
+            <p class="text-dark-1 mb-3">Downtown Complex, Building D King Faisal Road P.O. Box 31188 – Al -Khobar 31952 Kingdom of Saudi Arabia.</p>
+        </a>
+
+            <a class="text-dark-1 " href="tel:+966135109625">+966135109625</a>
+           <br>
+            <a class="text-dark-1 " href="mailto:Info@C3iProtect.com">Info@C3iProtect.com</a>
+
+        </div>
+
+    </div>
+    <hr class="h-0.5 text-dark-0">
+    <p class="lg:px-0 px-4 text-dark-1 mt-4 text-dark-0">
+	© <span id="year"></span> C3i Protect. All Rights Reserved.
+	</p>
+	<script>
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+</div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+
+<script src="js/wow.min.js"></script>
+
+
+
+
+<script src="https://www.google.com/recaptcha/api.js?" async defer></script>
+
+
+<script>
+$('.plus-btn').on('click',function(){
+console.log('opened')
+let id=$(this).attr('data-id')
+$('.plus-btn'+id).toggleClass('active')
+$('.service-card-upper-'+id).toggleClass('h-100')
+$('.service-'+id).toggleClass('hidden')
+// $('.service-'+id).toggleClass('service-bullets-sec-closed')
+$('.service-card-'+id).toggleClass('service-card-opened')
+
+})
+
+
+</script>
+
+<script>
+
+$(function(){
+  new WOW().init();
+});
+
+//  function switchNav(){
+//         $('.sidebar-section').toggleClass('sidebar-open')
+
+//     }
+
+
+$( window ).on( "resize", function() {
+    closeNav()
+} );
+
+
+function openNav() {
+        document.getElementById("mySidenav").style.marginLeft = "0vw";
+        // $('#main').css('filter','brightness(70%)')
+        // $('.my-navbar').css('filter','brightness(70%)')
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+
+
+            if(window.innerWidth<1024){
+                document.getElementById("mySidenav").style.marginLeft = "-50vw";
+
+            }
+            else {
+                document.getElementById("mySidenav").style.marginLeft = "-33.333333vw";
+
+            }
+            // $('#main').css('filter','brightness(100%)')
+            // $('.my-navbar').css('filter','brightness(100%)')
+
+        }
+</script>
+    </body>
+</html>
