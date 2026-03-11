@@ -16,6 +16,8 @@
         <link rel="icon" type="image/x-icon" href="storage/imgs/favicon.svg">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
 
@@ -29,7 +31,14 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/sidebar.css" rel="stylesheet">
         <link href="css/build.css" rel="stylesheet">
-
+    <style>
+        #form-status {
+            clear: both;
+            padding-top: 20px;
+            color: #1f2937;
+            font-size: 16px;
+        }
+    </style>
     </head>
     <body>
                 <div class="z-50 clash-font-normal tracking-wider container text-dark-0 backdrop-blur-sm bg-gray-0/75 mx-auto flex justify-between items-center py-4 px-8 my-4 sticky top-4 rounded-full">
@@ -139,7 +148,7 @@
 
 <div class="lg:w-3/5 w-full">
     <h1 class="my-8 text-5xl text-dark-0 clash-font-normal">Let’s get in touch</h1>
-    <form class="" action="contact-submit" method="POST">
+    <form id="contact-form">
         <div class="grid grid-cols-2 gap-4 text-dark-0">
             <input class="my-input mb-4" type="text" value="" id="name" name="name" placeholder="Name"   required>
 
@@ -150,12 +159,11 @@
             <input class="my-input mb-4" type="tel" value="" id="phone" name="phone" placeholder="Phone"   required>
             <input type="hidden" name="_token" value="dJYdRCIkoulseLUH20aZWNtrdj1u2mhqvDundTCQ" autocomplete="off">
 
-            <textarea class="my-input col-span-2" id="message" name="msg" placeholder="Message" rows="4"  required></textarea>
+            <textarea class="my-input col-span-2" id="message" name="message" placeholder="Message" rows="4"  required></textarea>
         </div>
-        <div data-theme="light" data-sitekey="6LdsvEAsAAAAAPTDX8XT1FUf2fBjvzrnRTt_UrNH" class="g-recaptcha"></div>
-
-        <button type="submit" value="Send" class="bg-mint-0  mt-4 border-none py-2 px-8 float-right rounded-full text-white-0">Send</button>
-           
+        <div data-theme="light" data-sitekey="6LdsvEAsAAAAAPTDX8XT1FUf2fBjvzrnRTt_UrNH" class="g-recaptcha"></div>        
+        <button type="submit" class="bg-mint-0  mt-4 border-none py-2 px-8 float-right rounded-full text-white-0">Send</button>
+        <p id="form-status"></p>
     </form>
 
 
@@ -259,6 +267,39 @@ function openNav() {
             // $('.my-navbar').css('filter','brightness(100%)')
 
         }
+    (function () {
+        emailjs.init({
+            publicKey: "GEoGoRwVV4VmM1Fa5"
+        });
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formStatus = document.getElementById("form-status");
+        const submitButton = this.querySelector('button[type="submit"]');
+
+        formStatus.textContent = "Sending...";
+        submitButton.disabled = true;
+        submitButton.style.opacity = "0.7";
+        submitButton.style.cursor = "not-allowed";
+
+        emailjs.sendForm(
+            "service_46o79or",
+            "template_8cpj31b",
+            "#contact-form"
+        ).then(function () {
+            formStatus.textContent = "Message sent successfully.";
+            document.getElementById("contact-form").reset();
+        }).catch(function (error) {
+            console.error("EmailJS Error:", error);
+            formStatus.textContent = "Failed to send message. Please try again.";
+        }).finally(function () {
+            submitButton.disabled = false;
+            submitButton.style.opacity = "1";
+            submitButton.style.cursor = "pointer";
+        });
+    });
 </script>
     </body>
 </html>
