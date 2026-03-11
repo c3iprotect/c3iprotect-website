@@ -31,14 +31,6 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/sidebar.css" rel="stylesheet">
         <link href="css/build.css" rel="stylesheet">
-    <style>
-        #form-status {
-            clear: both;
-            padding-top: 20px;
-            color: #1f2937;
-            font-size: 16px;
-        }
-    </style>
     </head>
     <body>
                 <div class="z-50 clash-font-normal tracking-wider container text-dark-0 backdrop-blur-sm bg-gray-0/75 mx-auto flex justify-between items-center py-4 px-8 my-4 sticky top-4 rounded-full">
@@ -290,10 +282,12 @@ function openNav() {
             "#contact-form"
         ).then(function () {
             formStatus.textContent = "Message sent successfully.";
+            formStatus.className = "success-msg";
             document.getElementById("contact-form").reset();
         }).catch(function (error) {
             console.error("EmailJS Error:", error);
             formStatus.textContent = "Failed to send message. Please try again.";
+            formStatus.className = "error-msg";
         }).finally(function () {
             submitButton.disabled = false;
             submitButton.style.opacity = "1";
