@@ -153,8 +153,8 @@
 
             <textarea class="my-input col-span-2" id="message" name="message" placeholder="Message" rows="4"  required></textarea>
         </div>
-        <div data-theme="light" data-sitekey="6LdsvEAsAAAAAPTDX8XT1FUf2fBjvzrnRTt_UrNH" class="g-recaptcha"></div>        
-        <button type="submit" class="bg-mint-0  mt-4 border-none py-2 px-8 float-right rounded-full text-white-0">Send</button>
+        <div data-theme="light" data-sitekey="6LdsvEAsAAAAAPTDX8XT1FUf2fBjvzrnRTt_UrNH" class="g-recaptcha" data-callback="onCaptchaSuccess" data-expired-callback="onCaptchaExpired" data-error-callback="onCaptchaError">></div>        
+        <button type="submit" id="submit-btn" class="bg-mint-0  mt-4 border-none py-2 px-8 float-right rounded-full text-white-0" disabled>Send</button>
         <p id="form-status"></p>
     </form>
 
@@ -268,8 +268,17 @@ function openNav() {
     document.getElementById("contact-form").addEventListener("submit", function (event) {
         event.preventDefault();
 
+        // CHECK CAPTCHA FIRST
+        const captchaResponse = grecaptcha.getResponse();
+        if (!captchaResponse) {
+            formStatus.textContent = "Please complete the CAPTCHA.";
+            formStatus.className = "error-msg";
+            return;
+        }
+
         const formStatus = document.getElementById("form-status");
         const submitButton = this.querySelector('button[type="submit"]');
+
 
         formStatus.textContent = "Sending...";
         submitButton.disabled = true;
@@ -284,6 +293,16 @@ function openNav() {
             formStatus.textContent = "Message sent successfully.";
             formStatus.className = "success-msg";
             document.getElementById("contact-form").reset();
+
+            // reset captcha
+            grecaptcha.reset();
+
+            // disable send button again
+            const submitButton = document.getElementById("submit-btn");
+            submitButton.disabled = true;
+            submitButton.style.opacity = "0.5";
+            submitButton.style.cursor = "not-allowed";
+            
         }).catch(function (error) {
             console.error("EmailJS Error:", error);
             formStatus.textContent = "Failed to send message. Please try again.";
@@ -294,6 +313,26 @@ function openNav() {
             submitButton.style.cursor = "pointer";
         });
     });
+    function onCaptchaSuccess(token) {
+        const submitButton = document.getElementById("submit-btn");
+        submitButton.disabled = false;
+        submitButton.style.opacity = "1";
+        submitButton.style.cursor = "pointer";
+    }
+
+    function onCaptchaExpired() {
+        const submitButton = document.getElementById("submit-btn");
+        submitButton.disabled = true;
+        submitButton.style.opacity = "0.5";
+        submitButton.style.cursor = "not-allowed";
+    }
+
+    function onCaptchaError() {
+        const submitButton = document.getElementById("submit-btn");
+        submitButton.disabled = true;
+        submitButton.style.opacity = "0.5";
+        submitButton.style.cursor = "not-allowed";
+    }
 </script>
     </body>
 </html>

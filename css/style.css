@@ -285,3 +285,7 @@ font-weight: 300;
 .error-msg {
     color: #c2274f; /* C3iProtect red color */
 }
+#submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
